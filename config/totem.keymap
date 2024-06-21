@@ -48,7 +48,16 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        Caps {
+            bindings = <&caps_word>;
+            key-positions = <13 16>;
+            layers = <0>;
+            timeout-ms = <50>;
+        };
+    };
 
     macros {
         pw: pw {
@@ -56,6 +65,7 @@
             #binding-cells = <0>;
             bindings = <&kp N5 &kp N6 &kp N5 &kp N6 &kp N &kp O &kp LS(P) &kp EXCL &kp S &kp T &kp O &kp EXCL>;
             label = "PW";
+            wait-ms = <0>;
         };
 
         sb: sb {
@@ -82,7 +92,7 @@
        &kp Q       &kp W       &kp F        &kp P         &kp B    &kp J  &kp L        &kp U        &kp O       &kp SQT
        &hm LGUI A  &hm LALT R  &hm LCTRL S  &hm LSHIFT T  &kp G    &kp M  &hm RSHFT N  &hm RCTRL E  &hm RALT I  &hm RGUI O
 &mo 3  &kp Z       &kp X       &kp C        &kp D         &kp V    &kp K  &kp H        &kp COMMA    &kp DOT     &kp SLASH   &kp ENTER
-                               &none        &kp SPACE     &mo 4    &mo 1  &lt 0 BSPC   &mo 2
+                               &mo 3        &kp SPACE     &mo 4    &mo 1  &lt 0 BSPC   &mo 2
             >;
         };
 
@@ -119,10 +129,10 @@
         Mouse {
             label = "Mouse";
             bindings = <
-       &none  &none  &mkp RCLK  &mkp LCLK  &none    &none  &none  &none  &none  &none
-       &none  &none  &none      &mo 5      &none    &none  &none  &none  &none  &none
-&none  &none  &none  &none      &none      &none    &none  &none  &none  &none  &none  &none
-                     &none      &none      &none    &none  &none  &none
+       &none  &none  &mkp RCLK  &mkp LCLK  &none    &none            &none            &none          &none             &none
+       &none  &none  &none      &mo 5      &none    &mmv MOUSE_LEFT  &mmv MOUSE_DOWN  &mmv MOUSE_UP  &mmv MOUSE_RIGHT  &none
+&none  &none  &none  &none      &none      &none    &msc MOUSE_LEFT  &msc MOUSE_DOWN  &msc MOUSE_UP  &msc MOUSE_RIGHT  &none  &none
+                     &none      &none      &none    &none            &none            &none
             >;
         };
 
