@@ -19,9 +19,8 @@
 #define Base        0
 #define Nav         1
 #define Num         2
-#define WinNav      3
-#define Mouse       4
-#define MouseJump   5
+#define Mouse       3
+#define MouseJump   4
 
 &mt {
     quick-tap-ms = <100>;
@@ -34,6 +33,12 @@
     tapping-term-ms = <240>;
     flavor = "balanced";
     quick-tap-ms = <150>;
+};
+
+&mmv {
+  acceleration-exponent = <1>;      // 1
+  time-to-max-speed-ms = <500>;    // 40
+  delay-ms = <0>;                   // 0
 };
 
 / {
@@ -150,6 +155,7 @@
             bindings = <&kp N5 &kp N6 &kp N5 &kp N6 &kp N &kp O &kp LS(P) &kp EXCL &kp S &kp T &kp O &kp EXCL>;
             label = "PW";
             wait-ms = <5>;
+            tap-ms = <5>;
         };
 
         sb: sb {
@@ -158,6 +164,7 @@
             bindings = <&kp Y &kp E &kp O &kp S &kp H &kp I &kp B &kp I &kp N &kp N9 &kp N7 &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
             label = "SB";
             wait-ms = <5>;
+            tap-ms = <5>;
         };
 
         rh: rh {
@@ -166,6 +173,7 @@
             bindings = <&none &kp S &kp H &kp Y &kp E &kp O &kp AT &kp R &kp E &kp D &kp H &kp A &kp T &kp DOT &kp C &kp O &kp M>;
             label = "RH";
             wait-ms = <5>;
+            tap-ms = <5>;
         };
     };
 
@@ -177,7 +185,7 @@
             bindings = <
        &kp Q        &kp W        &kp F           &kp P          &kp B    &kp J  &kp L          &kp U         &kp Y        &kp SQT
        &hml LGUI A  &hml LALT R  &hml LCTRL S    &hml LSHIFT T  &kp G    &kp M  &hmr RSHFT N   &hmr RCTRL E  &hmr RALT I  &hmr RGUI O
-&mo 4  &kp Z        &kp X        &kp C           &kp D          &kp V    &kp K  &kp H          &kp COMMA     &kp DOT      &kp SLASH    &kp ESCAPE
+&mo 3  &kp Z        &kp X        &kp C           &kp D          &kp V    &kp K  &kp H          &kp COMMA     &kp DOT      &kp SLASH    &kp ESCAPE
                                  &kp LEFT_SHIFT  &kp SPACE      &mo 2    &mo 1  &kp BACKSPACE  &kp ENTER
             >;
         };
@@ -202,22 +210,12 @@
             >;
         };
 
-        WinNav {
-            label = "WinNav";
-            bindings = <
-       &none     &none         &none      &none           &none    &none  &kp LS(LA(LC(N7)))  &kp LS(LA(LC(N8)))  &kp LS(LA(LC(N9)))  &kp LS(LA(LC(TAB)))
-       &kp LGUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none    &none  &kp LS(LA(LC(N4)))  &kp LS(LA(LC(N5)))  &kp LS(LA(LC(N6)))  &kp LA(TAB)
-&none  &none     &none         &none      &none           &none    &none  &kp LA(LS(LC(N1)))  &kp LS(LA(LC(N2)))  &kp LS(LA(LC(N3)))  &none                &none
-                               &none      &none           &none    &none  &none               &kp LS(LA(LC(N0)))
-            >;
-        };
-
         Mouse {
             label = "Mouse";
             bindings = <
-       &none  &none  &mkp RCLK  &mkp LCLK  &none    &none           &none           &none         &none            &none
-       &none  &none  &none      &mo 5      &none    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
-&none  &none  &none  &none      &none      &none    &msc MOVE_LEFT  &msc MOVE_DOWN  &msc MOVE_UP  &msc MOVE_RIGHT  &none  &none
+       &none  &none  &mkp RCLK  &mkp LCLK  &none    &none           &none           &none          &none            &none
+       &none  &none  &none      &mo 4      &none    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP   &mmv MOVE_RIGHT  &none
+&none  &none  &none  &none      &none      &none    &msc MOVE_LEFT  &msc MOVE_UP    &msc MOVE_DOWN &msc MOVE_RIGHT  &none  &none
                      &none      &none      &none    &none           &none           &none
             >;
         };
