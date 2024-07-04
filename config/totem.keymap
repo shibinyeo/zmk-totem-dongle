@@ -104,8 +104,7 @@
             #binding-cells = <0>;
             bindings = <&kp N5 &kp N6 &kp N5 &kp N6 &kp N &kp O &kp LS(P) &kp EXCL &kp S &kp T &kp O &kp EXCL>;
             label = "PW";
-            wait-ms = <0>;
-            tap-ms = <1>;
+            wait-ms = <5>;
         };
 
         sb: sb {
@@ -113,8 +112,7 @@
             #binding-cells = <0>;
             bindings = <&kp Y &kp E &kp O &kp S &kp H &kp I &kp B &kp I &kp N &kp N9 &kp N7 &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
             label = "SB";
-            wait-ms = <0>;
-            tap-ms = <50>;
+            wait-ms = <5>;
         };
 
         rh: rh {
@@ -122,8 +120,7 @@
             #binding-cells = <0>;
             bindings = <&none &kp S &kp H &kp Y &kp E &kp O &kp AT &kp R &kp E &kp D &kp H &kp A &kp T &kp DOT &kp C &kp O &kp M>;
             label = "RH";
-            wait-ms = <100>;
-            tap-ms = <1>;
+            wait-ms = <5>;
         };
     };
 
