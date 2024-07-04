@@ -91,6 +91,11 @@
             bindings = <&kp TAB>;
             key-positions = <10 33>;
         };
+
+        switch_window {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <34 0>;
+        };
     };
 
     macros {
@@ -100,6 +105,7 @@
             bindings = <&kp N5 &kp N6 &kp N5 &kp N6 &kp N &kp O &kp LS(P) &kp EXCL &kp S &kp T &kp O &kp EXCL>;
             label = "PW";
             wait-ms = <0>;
+            tap-ms = <1>;
         };
 
         sb: sb {
@@ -107,6 +113,8 @@
             #binding-cells = <0>;
             bindings = <&kp Y &kp E &kp O &kp S &kp H &kp I &kp B &kp I &kp N &kp N9 &kp N7 &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
             label = "SB";
+            wait-ms = <0>;
+            tap-ms = <50>;
         };
 
         rh: rh {
@@ -114,6 +122,8 @@
             #binding-cells = <0>;
             bindings = <&none &kp S &kp H &kp Y &kp E &kp O &kp AT &kp R &kp E &kp D &kp H &kp A &kp T &kp DOT &kp C &kp O &kp M>;
             label = "RH";
+            wait-ms = <100>;
+            tap-ms = <1>;
         };
     };
 
@@ -143,10 +153,10 @@
         Num {
             label = "Num";
             bindings = <
-       &kp GRAVE  &kp MINUS  &kp EQUAL       &none         &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp N7  &kp N8  &kp N9  &kp NON_US_BACKSLASH
-       &kp LGUI   &kp LALT   &kp LCTRL       &kp LSHFT     &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp N4  &kp N5  &kp N6  &kp SEMICOLON
-&none  &none      &none      &none           &none         &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp N1  &kp N2  &kp N3  &kp N0                &none
-                             &bt BT_CLR_ALL  &out OUT_TOG  &none                   &none                  &none   &none
+       &kp GRAVE  &kp MINUS  &kp EQUAL       &none         &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp N7         &kp N8  &kp N9  &kp NON_US_BACKSLASH
+       &kp LGUI   &kp LALT   &kp LCTRL       &kp LSHFT     &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp N4         &kp N5  &kp N6  &kp SEMICOLON
+&none  &none      &none      &none           &none         &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp N1         &kp N2  &kp N3  &none                 &soft_off
+                             &bt BT_CLR_ALL  &out OUT_TOG  &none                   &kp PERIOD             &kp BACKSPACE  &kp N0
             >;
         };
 
@@ -181,3 +191,4 @@
         };
     };
 };
+
