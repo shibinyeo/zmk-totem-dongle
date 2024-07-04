@@ -96,6 +96,51 @@
             bindings = <&kp LA(TAB)>;
             key-positions = <34 0>;
         };
+
+        workspace_1 {
+            bindings = <&kp LS(LA(LC(NUMBER_1)))>;
+            key-positions = <37 27>;
+        };
+
+        workspace_2 {
+            bindings = <&kp LS(LA(LC(NUMBER_2)))>;
+            key-positions = <37 28>;
+        };
+
+        workspace_3 {
+            bindings = <&kp LS(LA(LC(NUMBER_3)))>;
+            key-positions = <37 29>;
+        };
+
+        workspace_4 {
+            bindings = <&kp LS(LA(LC(NUMBER_4)))>;
+            key-positions = <37 16>;
+        };
+
+        workspace_5 {
+            bindings = <&kp LS(LA(LC(N5)))>;
+            key-positions = <37 17>;
+        };
+
+        workspace_6 {
+            bindings = <&kp LS(LA(LC(NUMBER_6)))>;
+            key-positions = <37 18>;
+        };
+
+        workspace_7 {
+            bindings = <&kp LS(LA(LC(N7)))>;
+            key-positions = <37 6>;
+        };
+
+        workspace_8 {
+            bindings = <&kp LS(LA(LC(N8)))>;
+            key-positions = <37 7>;
+        };
+
+        workspace_9 {
+            bindings = <&kp LS(LA(LC(N9)))>;
+            key-positions = <37 8>;
+        };
     };
 
     macros {
@@ -132,8 +177,8 @@
             bindings = <
        &kp Q        &kp W        &kp F           &kp P          &kp B    &kp J  &kp L          &kp U         &kp Y        &kp SQT
        &hml LGUI A  &hml LALT R  &hml LCTRL S    &hml LSHIFT T  &kp G    &kp M  &hmr RSHFT N   &hmr RCTRL E  &hmr RALT I  &hmr RGUI O
-&mo 4  &kp Z        &kp X        &kp C           &kp D          &kp V    &kp K  &kp H          &kp COMMA     &kp DOT      &kp SLASH    &kp ENTER
-                                 &kp LEFT_SHIFT  &kp SPACE      &mo 2    &mo 1  &kp BACKSPACE  &mo 3
+&mo 4  &kp Z        &kp X        &kp C           &kp D          &kp V    &kp K  &kp H          &kp COMMA     &kp DOT      &kp SLASH    &kp ESCAPE
+                                 &kp LEFT_SHIFT  &kp SPACE      &mo 2    &mo 1  &kp BACKSPACE  &kp ENTER
             >;
         };
 
