@@ -36,9 +36,9 @@
 };
 
 &mmv {
-  acceleration-exponent = <1>;      // 1
-  time-to-max-speed-ms = <500>;    // 40
-  delay-ms = <0>;                   // 0
+    acceleration-exponent = <1>;      // 1
+    time-to-max-speed-ms = <500>;    // 40
+    delay-ms = <0>;                   // 0
 };
 
 / {
@@ -146,6 +146,26 @@
             bindings = <&kp LS(LA(LC(N9)))>;
             key-positions = <37 8>;
         };
+
+        minus_underscore {
+            bindings = <&kp MINUS>;
+            key-positions = <34 13>;
+        };
+
+        equals_plus {
+            bindings = <&kp EQUAL>;
+            key-positions = <34 12>;
+        };
+
+        grave_tilde {
+            bindings = <&kp GRAVE>;
+            key-positions = <34 10>;
+        };
+
+        backslash_pipe {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <34 11>;
+        };
     };
 
     macros {
@@ -183,29 +203,29 @@
         Base {
             label = "Base";
             bindings = <
-       &kp Q        &kp W        &kp F           &kp P          &kp B    &kp J  &kp L          &kp U         &kp Y        &kp SQT
-       &hml LGUI A  &hml LALT R  &hml LCTRL S    &hml LSHIFT T  &kp G    &kp M  &hmr RSHFT N   &hmr RCTRL E  &hmr RALT I  &hmr RGUI O
-&mo 3  &kp Z        &kp X        &kp C           &kp D          &kp V    &kp K  &kp H          &kp COMMA     &kp DOT      &kp SLASH    &kp ESCAPE
-                                 &kp LEFT_SHIFT  &kp SPACE      &mo 2    &mo 1  &kp BACKSPACE  &kp ENTER
+         &kp Q        &kp W        &kp F           &kp P          &kp B    &kp J  &kp L          &kp U         &kp Y        &kp SQT
+         &hml LGUI A  &hml LALT R  &hml LCTRL S    &hml LSHIFT T  &kp G    &kp M  &hmr RSHFT N   &hmr RCTRL E  &hmr RALT I  &hmr RGUI O
+&kp TAB  &kp Z        &kp X        &kp C           &kp D          &kp V    &kp K  &kp H          &kp COMMA     &kp DOT      &kp SLASH    &kp DELETE
+                                   &kp LEFT_SHIFT  &kp SPACE      &mo 2    &mo 1  &kp BACKSPACE  &kp ENTER
             >;
         };
 
         Nav {
             label = "Nav";
             bindings = <
-         &kp F1        &kp F2        &kp F3     &kp F4             &kp F5             &kp F6    &kp F7         &kp F8       &kp F9     &kp F10
-         &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT     &none              &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp PRINTSCREEN
-&kp TAB  &sb           &rh           &pw        &none              &none              &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp DELETE       &kp ESCAPE
-                                     &none      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &none     &none          &soft_off
+        &kp F2        &kp F3        &kp F4     &kp F5             &kp F6             &kp F7    &kp F8         &kp F9       &kp F10    &kp F11
+        &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT     &none              &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp PRINTSCREEN
+&kp F1  &sb           &rh           &pw        &none              &none              &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp DELETE       &kp F12
+                                    &none      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &none     &none          &soft_off
             >;
         };
 
         Num {
             label = "Num";
             bindings = <
-       &kp GRAVE  &kp MINUS  &kp EQUAL  &none         &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp N7         &kp N8  &kp N9  &kp NON_US_BACKSLASH
+       &kp GRAVE  &kp MINUS  &kp EQUAL  &none         &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp N7         &kp N8  &kp N9  &kp BACKSLASH
        &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT     &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp N4         &kp N5  &kp N6  &kp SEMICOLON
-&none  &none      &none      &none      &none         &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp N1         &kp N2  &kp N3  &none                 &bt BT_CLR_ALL
+&none  &none      &none      &none      &none         &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp N1         &kp N2  &kp N3  &none          &bt BT_CLR_ALL
                              &soft_off  &out OUT_TOG  &none                   &kp PERIOD             &kp BACKSPACE  &kp N0
             >;
         };
@@ -213,9 +233,9 @@
         Mouse {
             label = "Mouse";
             bindings = <
-       &none  &none  &mkp RCLK  &mkp LCLK  &none    &none           &none           &none          &none            &none
-       &none  &none  &none      &mo 4      &none    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP   &mmv MOVE_RIGHT  &none
-&none  &none  &none  &none      &none      &none    &msc MOVE_LEFT  &msc MOVE_UP    &msc MOVE_DOWN &msc MOVE_RIGHT  &none  &none
+       &none  &none  &mkp RCLK  &mkp LCLK  &none    &none           &none           &none           &none            &none
+       &none  &none  &none      &mo 4      &none    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none
+&none  &none  &none  &none      &none      &none    &msc MOVE_LEFT  &msc MOVE_UP    &msc MOVE_DOWN  &msc MOVE_RIGHT  &none  &none
                      &none      &none      &none    &none           &none           &none
             >;
         };
