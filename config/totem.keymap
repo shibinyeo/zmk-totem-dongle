@@ -147,24 +147,9 @@
             key-positions = <37 8>;
         };
 
-        minus_underscore {
-            bindings = <&kp MINUS>;
-            key-positions = <34 13>;
-        };
-
-        equals_plus {
-            bindings = <&kp EQUAL>;
-            key-positions = <34 12>;
-        };
-
-        grave_tilde {
-            bindings = <&kp GRAVE>;
-            key-positions = <34 10>;
-        };
-
-        backslash_pipe {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <34 11>;
+        tmux_copy_mode {
+            bindings = <&tcm>;
+            key-positions = <3 2 7 6>;
         };
     };
 
@@ -190,10 +175,17 @@
         rh: rh {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp S &kp H &kp Y &kp E &kp O &kp AT &kp R &kp E &kp D &kp H &kp A &kp T &kp DOT &kp C &kp O &kp M>;
+            bindings = <&kp S &kp H &kp Y &kp E &kp O &kp AT &kp R &kp E &kp D &kp H &kp A &kp T &kp DOT &kp C &kp O &kp M>;
             label = "RH";
             wait-ms = <5>;
             tap-ms = <5>;
+        };
+
+        tcm: tmux_copy_mode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RC(B) &kp LEFT_BRACKET>;
+            label = "TMUX_COPY_MODE";
         };
     };
 
@@ -205,7 +197,7 @@
             bindings = <
          &kp Q        &kp W        &kp F           &kp P          &kp B    &kp J  &kp L          &kp U         &kp Y        &kp SQT
          &hml LGUI A  &hml LALT R  &hml LCTRL S    &hml LSHIFT T  &kp G    &kp M  &hmr RSHFT N   &hmr RCTRL E  &hmr RALT I  &hmr RGUI O
-&kp TAB  &kp Z        &kp X        &kp C           &kp D          &kp V    &kp K  &kp H          &kp COMMA     &kp DOT      &kp SLASH    &kp DELETE
+&kp TAB  &kp Z        &kp X        &kp C           &kp D          &kp V    &kp K  &kp H          &kp COMMA     &kp DOT      &kp SLASH    &kp SEMICOLON
                                    &kp LEFT_SHIFT  &kp SPACE      &mo 2    &mo 1  &kp BACKSPACE  &kp ENTER
             >;
         };
