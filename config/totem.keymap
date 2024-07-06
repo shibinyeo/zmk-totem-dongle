@@ -47,7 +47,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_LEFT";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             tapping-term-ms = <120>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
@@ -61,7 +61,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_RIGHT";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             tapping-term-ms = <120>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
@@ -161,6 +161,16 @@
             bindings = <&kp RC(V)>;
             key-positions = <25 17>;
         };
+
+        colon {
+            bindings = <&kp LS(SEMICOLON)>;
+            key-positions = <13 31>;
+        };
+
+        double_quote {
+            bindings = <&kp LS(SQT)>;
+            key-positions = <13 9>;
+        };
     };
 
     macros {
@@ -205,10 +215,10 @@
         Base {
             label = "Base";
             bindings = <
-         &kp Q        &kp W        &kp F           &kp P      &kp B    &kp J  &kp L          &kp U         &kp Y        &kp SQT
-         &hml LGUI A  &hml LALT R  &hml LCTRL S    &kp T      &kp G    &kp M  &kp N          &hmr RCTRL E  &hmr RALT I  &hmr RGUI O
-&kp TAB  &kp Z        &kp X        &kp C           &kp D      &kp V    &kp K  &kp H          &kp COMMA     &kp DOT      &kp SLASH    &kp SEMICOLON
-                                   &kp LEFT_SHIFT  &kp SPACE  &mo 2    &mo 1  &kp BACKSPACE  &kp ENTER
+         &kp Q        &kp W        &kp F           &kp P          &kp B    &kp J  &kp L          &kp U         &kp Y        &kp SQT
+         &hml LGUI A  &hml LALT R  &hml LCTRL S    &hml LSHIFT T  &kp G    &kp M  &hmr RSHIFT N  &hmr RCTRL E  &hmr RALT I  &hmr RGUI O
+&kp TAB  &kp Z        &kp X        &kp C           &kp D          &kp V    &kp K  &kp H          &kp COMMA     &kp DOT      &kp SLASH    &kp SEMICOLON
+                                   &kp LEFT_SHIFT  &kp SPACE      &mo 2    &mo 1  &kp BACKSPACE  &kp ENTER
             >;
         };
 
