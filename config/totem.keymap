@@ -47,13 +47,13 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_LEFT";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             tapping-term-ms = <120>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
 
             hold-trigger-key-positions = <0 1 2 12 3 4 0 10 11 13 14 20 21 22 23 24 25 32 33 34>;
-            require-prior-idle-ms = <1>;
+            require-prior-idle-ms = <120>;
             hold-trigger-on-release;
         };
 
@@ -61,12 +61,12 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_RIGHT";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             tapping-term-ms = <120>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
 
-            require-prior-idle-ms = <1>;
+            require-prior-idle-ms = <120>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31 35 36 37>;
         };
@@ -148,17 +148,17 @@
         };
 
         copy {
-            bindings = <&kp K_COPY>;
+            bindings = <&kp RC(C)>;
             key-positions = <17 23>;
         };
 
         cut {
-            bindings = <&kp K_CUT>;
+            bindings = <&kp RC(X)>;
             key-positions = <22 17>;
         };
 
         paste {
-            bindings = <&kp K_PASTE>;
+            bindings = <&kp RC(V)>;
             key-positions = <25 17>;
         };
     };
