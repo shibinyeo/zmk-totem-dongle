@@ -22,6 +22,9 @@
 #define Mouse       3
 #define MouseJump   4
 
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
+
 &mt {
     quick-tap-ms = <100>;
     global-quick-tap;
