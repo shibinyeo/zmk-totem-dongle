@@ -23,7 +23,7 @@
 #define MouseJump   4
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 3    // 10
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 10    // 10
 
 &mt {
     quick-tap-ms = <100>;
@@ -40,14 +40,14 @@
 
 &mmv {
     acceleration-exponent = <1>;      // 1
-    time-to-max-speed-ms = <500>;    // 40
+    time-to-max-speed-ms = <500>;     // 40
     delay-ms = <0>;                   // 0
 };
 
 &msc {
-    acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <1000>;     // 500
-    delay-ms = <1000>;                   // 10
+    acceleration-exponent = <0>;      // 0
+    time-to-max-speed-ms = <5000>;    // 500
+    delay-ms = <0>;                   // 10
 };
 
 / {
