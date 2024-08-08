@@ -236,10 +236,10 @@
         Nav {
             label = "Nav";
             bindings = <
-        &kp F2        &kp F3        &kp F4     &kp F5             &kp F6             &kp F7    &kp F8         &kp F9       &kp F10    &kp F11
-        &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT     &none              &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp PRINTSCREEN
-&kp F1  &sb           &rh           &pw        &none              &none              &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp DELETE       &kp F12
-                                    &none      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &none     &none          &soft_off
+        &kp F2        &kp F3        &kp F4       &kp F5             &kp F6             &kp F7    &kp F8         &kp F9       &kp F10    &kp F11
+        &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL    &kp LEFT_SHIFT     &none              &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp PRINTSCREEN
+&kp F1  &sb           &rh           &pw          &none              &none              &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp DELETE       &kp F12
+                                    &kp K_MUTE   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &none     &none          &soft_off
             >;
         };
 
