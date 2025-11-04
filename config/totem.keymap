@@ -175,11 +175,6 @@
             bindings = <&dquote>;
             key-positions = <0 9>;
         };
-
-        pipe {
-            bindings = <&kp PIPE>;
-            key-positions = <20 31>;
-        };
     };
 
     macros {
@@ -250,6 +245,8 @@
             #binding-cells = <0>;
             bindings = <&kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp LS(L) &kp EXCL &kp N2 &kp N3 &kp N4 &kp N5>;
             label = "RHPW";
+            wait-ms = <5>;
+            tap-ms = <5>;
         };
 
         num: num {
@@ -257,6 +254,33 @@
             #binding-cells = <0>;
             bindings = <&kp N9 &kp N8 &kp N5 &kp N7 &kp N8 &kp N4 &kp N3 &kp N9>;
             label = "NUM";
+            wait-ms = <5>;
+            tap-ms = <5>;
+        };
+
+        ocp: ocp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp O &kp P &kp E &kp N &kp S &kp H &kp I &kp F &kp T>;
+            label = "OCP";
+            wait-ms = <5>;
+            tap-ms = <5>;
+        };
+
+        oyml: oyml {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp O &kp Y &kp A &kp M &kp L &kp SPACE &kp PIPE &kp SPACE &kp L &kp E &kp S &kp S>;
+            label = "OYML";
+            wait-ms = <5>;
+            tap-ms = <5>;
+        };
+
+        clr: clr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(L) &kp LC(B) &kp LEFT_BRACKET &kp Q>;
+            label = "CLR";
         };
     };
 
@@ -279,27 +303,27 @@
         &kp F2        &kp F3        &kp F4      &kp F5             &kp F6             &kp F7    &kp F8         &kp F9       &kp F10    &kp F11
         &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL   &kp LEFT_SHIFT     &none              &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp PRINTSCREEN
 &kp F1  &sb           &rh           &pw         &rhpw              &num               &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp DELETE       &kp F12
-                                    &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &none     &none          &soft_off
+                                    &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &none     &none          &none
             >;
         };
 
         Num {
             label = "Num";
             bindings = <
-       &kp GRAVE  &kp MINUS  &kp EQUAL  &none         &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp N7         &kp N8  &kp N9  &kp BACKSLASH
-       &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT     &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp N4         &kp N5  &kp N6  &kp SEMICOLON
-&none  &none      &none      &none      &none         &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp N1         &kp N2  &kp N3  &none          &bt BT_CLR_ALL
-                             &soft_off  &out OUT_TOG  &none                   &kp PERIOD             &kp BACKSPACE  &kp N0
+              &kp GRAVE  &kp MINUS  &kp EQUAL  &kp PIPE   &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp N7         &kp N8  &kp N9  &kp BACKSLASH
+              &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp N4         &kp N5  &kp N6  &kp SEMICOLON
+&out OUT_TOG  &none      &ocp       &oyml      &clr       &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp N1         &kp N2  &kp N3  &none          &bt BT_CLR_ALL
+                                    &none      &none      &none                   &kp PERIOD             &kp BACKSPACE  &kp N0
             >;
         };
 
         Mouse {
             label = "Mouse";
             bindings = <
-       &none  &none  &mkp RCLK  &mkp LCLK  &none    &none           &none           &none         &none            &none
-       &none  &none  &none      &mo 4      &none    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
-&none  &none  &none  &none      &none      &none    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none  &studio_unlock
-                     &none      &none      &none    &none           &none           &none
+       &none  &none      &mkp RCLK  &mkp LCLK  &none    &none           &none           &none         &none            &none
+       &none  &kp LCTRL  &kp LSHFT  &mo 4      &none    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
+&none  &none  &none      &none      &none      &none    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none  &studio_unlock
+                         &none      &none      &none    &none           &none           &none
             >;
         };
 
