@@ -282,6 +282,13 @@
             bindings = <&kp LC(L) &kp LC(B) &kp LEFT_BRACKET &kp Q>;
             label = "CLR";
         };
+
+        note: note {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp I &kp MINUS &kp MINUS &kp MINUS &kp U &kp P &kp RET &kp LBKT &kp LBKT>;
+            label = "NOTE";
+        };
     };
 
     keymap {
@@ -301,7 +308,7 @@
             label = "Nav";
             bindings = <
         &kp F2        &kp F3        &kp F4      &kp F5             &kp F6             &kp F7    &kp F8         &kp F9       &kp F10    &kp F11
-        &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL   &kp LEFT_SHIFT     &none              &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp PRINTSCREEN
+        &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL   &kp LEFT_SHIFT     &note              &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp PRINTSCREEN
 &kp F1  &sb           &rh           &pw         &rhpw              &num               &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp DELETE       &kp F12
                                     &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &none     &none          &none
             >;
@@ -320,10 +327,10 @@
         Mouse {
             label = "Mouse";
             bindings = <
-       &none  &none      &mkp RCLK  &mkp LCLK  &none    &none           &none           &none         &none            &none
-       &none  &kp LCTRL  &kp LSHFT  &mo 4      &none    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
-&none  &none  &none      &none      &none      &none    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none  &studio_unlock
-                         &none      &none      &none    &none           &none           &none
+       &none  &none  &mkp RCLK  &mkp LCLK  &none    &none           &none           &none         &none            &none
+       &none  &none  &none      &mo 4      &none    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
+&none  &none  &none  &none      &none      &none    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none  &studio_unlock
+                     &none      &none      &none    &none           &none           &none
             >;
         };
 
