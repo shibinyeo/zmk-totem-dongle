@@ -317,10 +317,10 @@
         Num {
             label = "Num";
             bindings = <
-              &kp GRAVE  &kp MINUS  &kp EQUAL  &kp PIPE   &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp N7         &kp N8  &kp N9  &kp BACKSLASH
-              &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp N4         &kp N5  &kp N6  &kp SEMICOLON
-&out OUT_TOG  &none      &ocp       &oyml      &clr       &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp N1         &kp N2  &kp N3  &none          &bt BT_CLR_ALL
-                                    &none      &none      &none                   &kp PERIOD             &kp BACKSPACE  &kp N0
+       &kp GRAVE  &kp MINUS  &kp EQUAL  &kp PIPE   &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp N7         &kp N8  &kp N9  &kp BACKSLASH
+       &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp N4         &kp N5  &kp N6  &kp SEMICOLON
+&none  &none      &ocp       &oyml      &clr       &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp N1         &kp N2  &kp N3  &none          &none
+                             &none      &none      &none                   &kp PERIOD             &kp BACKSPACE  &kp N0
             >;
         };
 
@@ -329,8 +329,8 @@
             bindings = <
        &none  &none  &mkp RCLK  &mkp LCLK  &none    &none           &none           &none         &none            &none
        &none  &none  &none      &mo 4      &none    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
-&none  &none  &none  &none      &none      &none    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none  &studio_unlock
-                     &none      &none      &none    &none           &none           &none
+&none  &none  &none  &none      &none      &none    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none  &bt BT_CLR_ALL
+                     &none      &none      &none    &bt BT_NXT      &none           &out OUT_TOG
             >;
         };
 
